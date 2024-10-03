@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 1500px;
+}
+
+.underline-animation {
+    position: relative;
+    display: inline-block;
+}
+
+.underline-animation::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px; /* This adds a margin below the text */
+    height: 2px;
+    width: 0;
+    background-color: #f3a712; /* Your secondary color */
+    transition: width 0.3s ease;
+}
+
+.underline-animation:hover::after {
+    width: 100%; /* Makes the line span the full width on hover */
+}

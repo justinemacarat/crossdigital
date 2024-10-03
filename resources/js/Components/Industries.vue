@@ -1,0 +1,89 @@
+<template>
+    <section id="industries">
+        <div class="mt-16 sm:mt-24 md:mt-40 grid grid-cols-1 lg:grid-cols-2 gap-16 text-white">
+        <!-- Left Section -->
+        <div class="flex flex-col justify-center">
+            <p class="text-secondary font-semibold">Industries</p>
+            <h1 class="mt-4 text-3xl md:text-5xl font-medium leading-[2.5rem] md:leading-[3rem]">
+                Our digital marketing Industries
+            </h1>
+            <p class="mt-4 text-white font-light">
+                Quisque venenatis vestibulum consequat. Vivamus ac urna nulla. Duis sit amet consectetur nisi, eget elementum nunc. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </p>
+            <a href="#" class="my-8 inline-flex items-center text-sm font-medium text-center text-white transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">
+                <ArrowRightCircleIcon class="size-5 text-white mr-2" />
+                More Industries
+            </a>
+            <div class="flex flex-row">
+                <div class="mr-12 md:mr-20 mb-4 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-medium text-secondary leading-[2.5rem] md:leading-[3rem]">2.7K</h1>
+                    <p class="text-white font-medium">Project Done</p>
+                </div>
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-medium text-secondary leading-[2.5rem] md:leading-[3rem]">226K</h1>
+                    <p class="text-white font-medium">Happy Clients</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section (Responsive Boxes) -->
+        <div class="flex flex-col md:flex-row justify-center items-start">
+            <!-- Left Side (Two Boxes) -->
+            <div class="md:relative md:top-8 space-y-8 mr-0 md:mr-4 w-full md:w-auto">
+                <div class="p-6 bg-blackGray border border-neutral-500/60">
+                    <a href="#">
+                        <ComputerDesktopIcon class="h-8 w-8 text-white mb-3" />
+                        <h5 class="text-lg mb-2 font-semibold tracking-tight text-white">Website Design and Development</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-white font-light">Transform your ideas into stunning websites with our design and development services.</p>
+                    <a href="#" class="inline-flex items-center text-sm font-medium text-secondary transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">
+                        Learn More
+                        <ArrowRightIcon class="h-5 w-5 text-secondary ml-2" />
+                    </a>
+                </div>
+                <div class="p-6 bg-blackGray border border-neutral-500/60">
+                    <a href="#">
+                        <ComputerDesktopIcon class="h-8 w-8 text-white mb-3" />
+                        <h5 class="text-lg mb-2 font-semibold tracking-tight text-white">Website Design and Development</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-white font-light">Transform your ideas into stunning websites with our design and development services.</p>
+                    <a href="#" class="inline-flex items-center text-sm font-medium text-secondary transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">
+                        Learn More
+                        <ArrowRightIcon class="h-5 w-5 text-secondary ml-2" />
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side (Two Boxes) -->
+            <div class="space-y-8 w-full md:w-auto mt-8 md:mt-0 md:ml-4">
+                <div class="p-6 bg-blackGray border border-neutral-500/60">
+                    <a href="#">
+                        <ComputerDesktopIcon class="h-8 w-8 text-white mb-3" />
+                        <h5 class="text-lg mb-2 font-semibold tracking-tight text-white">Website Design and Development</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-white font-light">Transform your ideas into stunning websites with our design and development services.</p>
+                    <a href="#" class="inline-flex items-center text-sm font-medium text-secondary transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">
+                        Learn More
+                        <ArrowRightIcon class="h-5 w-5 text-secondary ml-2" />
+                    </a>
+                </div>
+                <div class="p-6 bg-blackGray border border-neutral-500/60">
+                    <a href="#">
+                        <ComputerDesktopIcon class="h-8 w-8 text-white mb-3" />
+                        <h5 class="text-lg mb-2 font-semibold tracking-tight text-white">Website Design and Development</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-white font-light">Transform your ideas into stunning websites with our design and development services.</p>
+                    <a href="#" class="inline-flex items-center text-sm font-medium text-secondary transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">
+                        Learn More
+                        <ArrowRightIcon class="h-5 w-5 text-secondary ml-2" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</template>
+
+<script setup>
+    import { ArrowRightCircleIcon, ArrowRightIcon, ComputerDesktopIcon } from '@heroicons/vue/20/solid'
+</script>
