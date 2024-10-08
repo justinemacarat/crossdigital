@@ -1,6 +1,6 @@
 <template>
   <section id="partners">
-    <div class="mt-16 sm:mt-24 md:mt-40 text-white">
+    <div class="mt-32 lg:mt-52 text-white">
       <!-- Heading Section -->
       <h1 class="my-4 text-2xl sm:text-3xl md:text-4xl font-medium leading-tight sm:leading-snug md:leading-[3rem] text-center">
         Our Partners already have Best in Venture Support.

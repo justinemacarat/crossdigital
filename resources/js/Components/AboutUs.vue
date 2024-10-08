@@ -1,6 +1,6 @@
 <template>
   <section id="about-us">
-    <div class="mt-16 sm:mt-24 md:mt-40 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 text-white">
+    <div class="mt-32 lg:mt-52 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 text-white">
       <!-- Image Section -->
       <div class="flex justify-start">
         <img
@@ -17,9 +17,8 @@
           We love what we do
         </h1>
         <p class="mt-4 text-sm sm:text-base md:text-lg text-white">
-          Quisque venenatis vestibulum consequat. Vivamus ac urna nulla. Duis sit
-          amet consectetur nisi, eget elementum nunc. Orci varius natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          At Cross Digital, we are driven by a passion for innovation and excellence in the ever-evolving world of digital marketing. We craft unique, data-driven strategies to help your 
+          business thrive in the online and traditional media landscape. Every project we undertake is a commitment to transforming your vision into success.
         </p>
   
         <!-- Vision and Mission Grid -->
@@ -32,20 +31,19 @@
               </h5>
             </div>
             <p class="mb-3 text-sm sm:text-base text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec.
+              To empower businesses with cutting-edge digital marketing solutions, leading them to sustained growth and unmatched market dominance.
             </p>
           </div>
           <div class="p-6 sm:p-8 bg-blackGray text-white">
             <div>
               <RocketLaunchIcon class="w-6 sm:w-8 text-secondary mb-3" />
               <h5 class="text-xl sm:text-2xl mb-2 font-semibold tracking-tight">
-                Our Vision
+                Our Mission
               </h5>
             </div>
             <p class="mb-3 text-sm sm:text-base text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec.
+              To deliver strategic, data-driven marketing solutions that transform our clients' brands, enhancing their online visibility, driving traffic, 
+              and maximizing their ROI in both digital and traditional media spaces.
             </p>
           </div>
         </div>

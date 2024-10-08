@@ -1,6 +1,6 @@
 <template>
     <section id="testimonials">
-        <div class="mt-16 md:mt-28 text-white">
+        <div class="mt-32 lg:mt-52 text-white">
             <div class="w-full">
                 <p class="text-secondary font-semibold">Testimonials</p>
                 <h1 class="mt-4 text-3xl md:text-4xl lg:text-5xl font-medium leading-tight md:leading-[3rem]">

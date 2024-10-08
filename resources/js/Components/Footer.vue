@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-blackGray">
-    <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 container p-6">
+  <div class="bg-blackGray mt-32 lg:mt-52">
+    <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 container px-12 pt-20 pb-12">
       <!-- First Column: Content and Social Media -->
       <div class="col-span-1  md:col-span-2 lg:col-start-1 lg:col-end-3 flex flex-col lg:justify-between mb-8 md:mb-0">
         <p class="text-white text-lg">Cross Digital - Digital Marketing</p>
@@ -8,9 +8,15 @@
           Our agency is dedicated to sparking innovation, creativity, and growth in the digital realm.
         </p>
         <div class="flex mt-4">
-          <font-awesome-icon :icon="['fab', 'x-twitter']" class="text-secondary text-2xl mr-4" />
-          <font-awesome-icon :icon="['fab', 'instagram']" class="text-secondary text-2xl mr-4" />
-          <font-awesome-icon :icon="['fab', 'facebook-f']" class="text-secondary text-xl mr-4" />
+          <a href="https://twitter.com" target="_blank">
+            <font-awesome-icon :icon="['fab', 'x-twitter']" class="text-secondary text-2xl mr-6" />
+          </a>
+          <a href="https://instagram.com" target="_blank">
+            <font-awesome-icon :icon="['fab', 'instagram']" class="text-secondary text-2xl mr-6" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <font-awesome-icon :icon="['fab', 'facebook-f']" class="text-secondary text-xl mr-6" />
+          </a>
         </div>
       </div>
 
@@ -84,8 +90,8 @@
           </div>
         </div>
       </div>
-      <hr class="border-t border-gray-600 col-span-full mt-4">
-      <p class="text-white text-xs mt-5 text-center col-span-full">© Copyright2024. All rights reserved by Cross Digital.</p>
+      <hr class="border-t border-gray-600 col-span-full mt-8">
+      <p class="text-white text-xs mt-8 text-center col-span-full">© Copyright2024. All rights reserved by Cross Digital.</p>
     </div>
   </div>
 </template>

@@ -1,7 +1,18 @@
 <template>
-    <div class="container px-12 mb-20">
+    <div class="container px-12 mb-20 h-dvh">
         <Navbar/>
-        <Banner />
+        <div class="absolute top-20 bottom-0 inset-x-0 overflow-hidden">
+            <video class="w-full h-full object-cover opacity-70" autoplay loop muted>
+                <source src="/videos/tech2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="flex justify-center items-center h-full z-10">
+            <Banner />
+        </div>
+        <!-- Image Section -->
+    </div>
+    <div class="container px-12 mb-20">
         <Services/>
         <AboutUs/>
         <Partners/>
