@@ -17,4 +17,8 @@ export default defineConfig({
             },
         }),
     ],
+    define: {
+        'process.env': {},
+        'import.meta.env.VITE_APP_URL': process.env.APP_URL, 
+      },
 });

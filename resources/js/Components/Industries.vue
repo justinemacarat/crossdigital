@@ -85,5 +85,43 @@
 </template>
 
 <script setup>
-    import { ArrowRightCircleIcon, ArrowRightIcon, ComputerDesktopIcon } from '@heroicons/vue/20/solid';
-</script>   
+import { useHead } from '@vueuse/head';
+import { ArrowRightCircleIcon, ArrowRightIcon, ComputerDesktopIcon } from '@heroicons/vue/20/solid';
+
+const appUrlDev = import.meta.env.VITE_APP_URL_DEV;
+
+// SEO Metadata
+useHead({
+  title: 'Industries We Serve - Cross Digital | Tailored Digital Marketing Solutions',
+  meta: [
+    {
+      name: 'description',
+      content: 'Discover Cross Digital\'s expertise across various industries. Our tailored digital marketing solutions empower businesses in healthcare, retail, technology, and more.',
+    },
+    {
+      property: 'og:title',
+      content: 'Industries We Serve - Cross Digital',
+    },
+    {
+      property: 'og:description',
+      content: 'Learn how Cross Digital provides specialized digital marketing solutions tailored to the unique needs of various industries, including e-commerce, social media, and SEO.',
+    },
+    {
+      property: 'og:url',
+      content: `${appUrlDev}/#industries`,
+    },
+    {
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+    {
+      name: 'twitter:title',
+      content: 'Industries We Serve - Cross Digital',
+    },
+    {
+      name: 'twitter:description',
+      content: 'Explore Cross Digital\'s tailored digital marketing solutions across multiple industries, designed to elevate your brand and drive growth.',
+    },
+  ],
+});
+</script>

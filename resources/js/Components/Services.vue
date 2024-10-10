@@ -67,6 +67,52 @@
 </template>
 
 <script setup>
-    import { ComputerDesktopIcon, DevicePhoneMobileIcon, MegaphoneIcon, PresentationChartBarIcon } from '@heroicons/vue/24/outline'
-    import { ArrowRightIcon } from '@heroicons/vue/20/solid'
+import { useHead } from '@vueuse/head';
+import { ComputerDesktopIcon, DevicePhoneMobileIcon, MegaphoneIcon, PresentationChartBarIcon } from '@heroicons/vue/24/outline'
+import { ArrowRightIcon } from '@heroicons/vue/20/solid'
+
+const appUrlDev = import.meta.env.VITE_APP_URL_DEV;
+
+// SEO Metadata
+useHead({
+  title: 'Digital Marketing Services | Elevate Your Business with Cross Digital',
+  meta: [
+    {
+      name: 'description',
+      content: 'Discover Cross Digital\'s range of digital marketing services, including web development, app development, SEO, and branding, tailored to elevate your business and achieve your goals effectively.',
+    },
+    {
+      property: 'og:title',
+      content: 'Digital Marketing Services - Cross Digital',
+    },
+    {
+      property: 'og:description',
+      content: 'Explore our comprehensive digital marketing services at Cross Digital, including web and app development, digital marketing strategies, and branding solutions designed to enhance your online presence.',
+    },
+    {
+      property: 'og:image',
+      content: `${appUrlDev}/images/services/featured-service-image.png`,
+    },
+    {
+      property: 'og:url',
+      content: `${appUrlDev}/#services`,
+    },
+    {
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+    {
+      name: 'twitter:title',
+      content: 'Digital Marketing Services - Cross Digital',
+    },
+    {
+      name: 'twitter:description',
+      content: 'Learn about our tailored digital marketing services at Cross Digital, including web and app development, SEO strategies, and branding solutions.',
+    },
+    {
+      name: 'twitter:image',
+      content: `${appUrlDev}/images/services/featured-service-image.png`,
+    },
+  ],
+});
 </script>

@@ -1,5 +1,6 @@
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';
+import { createHead } from '@vueuse/head';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -8,12 +9,18 @@ import { faXTwitter, faInstagram, faFacebookF } from '@fortawesome/free-brands-s
 
 library.add(faQuoteRight, faXTwitter, faInstagram, faFacebookF)
 
+const head = createHead();
+const appUrlDev = import.meta.env.VITE_APP_URL_DEV;
+
+console.log
 createInertiaApp({
   resolve: name => import(`./Pages/${name}.vue`), // Add .vue extension here
   setup({ el, App, props, plugin }) {
-    createApp({ render: () => h(App, props) })
-      .use(plugin)
-      .component('FontAwesomeIcon', FontAwesomeIcon) 
-      .mount(el);
+    const app = createApp({ render: () => h(App, props) });
+    app.config.globalProperties.$appUrlDev = appUrlDev;
+    app.use(plugin)
+       .use(head)
+       .component('FontAwesomeIcon', FontAwesomeIcon)
+       .mount(el);
   },
 });

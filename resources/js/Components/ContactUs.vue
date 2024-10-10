@@ -68,7 +68,6 @@
                         </h2>
                     </div>
 
-                    <!-- Loading message instead of overlay -->
                     <div v-if="loading" class="mt-4">
                         <div class="loading-indicator">
                             <div class="spinner"></div>
@@ -118,7 +117,7 @@
                                     <div class="sm:col-span-3">
                                         <label for="email" class="block text-sm font-medium leading-6 text-white">Email</label>
                                         <div class="mt-2">
-                                            <input type="text" 
+                                            <input type="email" 
                                                 v-model="form.email"
                                                 name="email" 
                                                 id="email" 
@@ -173,13 +172,13 @@
     </section>
 </template>
 
-
 <script setup>
     import { CheckIcon } from '@heroicons/vue/16/solid';
     import { MapPinIcon, EnvelopeIcon, PhoneIcon } from '@heroicons/vue/24/outline';
     import { useForm } from '@inertiajs/vue3';
     import { ref } from 'vue';
     import axios from 'axios';
+    import { useHead } from '@vueuse/head';
 
     const form = useForm({
         first_name: '',
@@ -191,63 +190,92 @@
 
     const showConfirmationDiv = ref(false);
     const loading = ref(false);
+
+    const appUrlDev = import.meta.env.VITE_APP_URL_DEV;
+
     const sendMessage = () => {
-        loading.value = true; // Set loading to true when the form is submitted
-        form.post('/contact-us', {
-            onSuccess: () => {
-                saveContactMessage(); 
-                loading.value = false;
-                showConfirmationDiv.value = true; 
-            },
-            onError: (errors) => {
-                console.log(errors);
-                loading.value = false;
-            },
-            preserveScroll: true
+        loading.value = true; // Set loading state
+        axios.post('/api/contact', form).then(response => {
+            loading.value = false; // Reset loading state
+            if (response.data.success) {
+                showConfirmationDiv.value = true;
+                form.reset(); // Reset the form after submission
+            } else {
+                alert('Something went wrong. Please try again later.');
+            }
+        }).catch(error => {
+            console.error(error);
+            loading.value = false; // Reset loading state on error
+            alert('Something went wrong. Please try again later.');
         });
     };
-    const saveContactMessage = () => {
 
-        const contactMessageData = {
-            first_name: form.first_name,  
-            last_name: form.last_name,  
-            email: form.email,  
-            message: form.message,
-            company: form.company
-        };
-
-        axios.post('/contact-message/store', contactMessageData)
-            .catch(error => {
-                // Handle validation or any other errors
-                if (error.response && error.response.data) {
-                    console.log(error.response.data.errors);
-                } else {
-                    console.error('Something went wrong:', error);
-                }
-            });
-    };
-
+    // SEO Head Data
+    useHead({
+        title: 'Contact Us - Cross Digital | Digital Marketing Experts',
+        meta: [
+            {
+                name: 'description',
+                content: 'Get in touch with us for inquiries, support, or feedback. We value your communication and look forward to connecting with you.'
+            },
+            {
+                property: 'og:title',
+                content: 'Contact Us - Cross Digital'
+            },
+            {
+                property: 'og:description',
+                content: 'Reach out to us for any questions or support. Your feedback is important to us!'
+            },
+            {
+                property: 'og:url',
+                content: `${appUrlDev}/#contact`
+            },
+            {
+                property: 'twitter:card',
+                content: 'summary_large_image'
+            },
+            {
+                property: 'twitter:title',
+                content: 'Contact Us - Cross Digital'
+            },
+            {
+                property: 'twitter:description',
+                content: 'We are here to assist you with your inquiries.'
+            }
+        ]
+    });
 </script>
 
 <style scoped>
     .loading-indicator {
         display: flex;
         align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 
     .spinner {
-        width: 20px;
-        height: 20px;
-        border: 3px solid transparent;
+        border: 4px solid rgba(255, 255, 255, 0.2);
         border-radius: 50%;
-        border-top-color: white;
+        border-top: 4px solid #ffffff;
+        width: 40px;
+        height: 40px;
         animation: spin 1s linear infinite;
-        margin-right: 8px;
     }
 
     @keyframes spin {
-        to {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
             transform: rotate(360deg);
         }
+    }
+    
+    .thank-you-confirmation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 </style>

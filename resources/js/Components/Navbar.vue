@@ -23,7 +23,7 @@
             <span class="underline-animation">Industries</span>
           </a>
           <a href="#testimonials" class="text-white hover:text-white font-medium">
-            <span class="underline-animation">Testimonials</span>
+          <span class="underline-animation">Testimonials</span>
           </a>
           <a href="#blogs" class="text-white hover:text-white font-medium">
             <span class="underline-animation">Blogs</span>
