@@ -1,31 +1,32 @@
 <template>
-  <section id="about-us">
-    <div class="mt-32 lg:mt-52 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 text-white">
+  <section id="about-us" class="relative">
+    <div class="mt-32 lg:mt-52 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 text-white items-center">
       <!-- Image Section -->
-      <div class="flex justify-start">
+      <div class="relative group overflow-hidden rounded-lg shadow-lg">
         <img
-          class="w-full h-48 sm:h-64 md:h-full object-cover"
+          class="w-full h-64 sm:h-80 lg:h-full object-cover group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700"
           src="/images/banner-laptop.jpg"
           alt="Cross Digital team working on a project"
         />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       </div>
 
       <!-- Text Section -->
-      <div class="flex flex-col justify-center">
-        <p class="text-secondary font-semibold">About Us</p>
-        <h1 class="mt-4 text-3xl sm:text-4xl md:text-5xl font-medium leading-tight sm:leading-snug md:leading-[3rem]">
-          We Love what we Do
+      <div>
+        <p class="text-secondary font-semibold tracking-wider uppercase">About Us</p>
+        <h1 class="text-4xl md:text-5xl font-bold text-white leading-snug">
+          We Love What We Do
         </h1>
-        <p class="mt-4 text-sm sm:text-base md:text-lg text-white">
-          At Cross Digital, we are driven by a passion for innovation and excellence in the ever-evolving world of digital marketing. Our team crafts unique, data-driven strategies to help your business thrive in both online and traditional media landscapes. Every project we undertake is a commitment to transforming your vision into success, enhancing brand visibility and driving meaningful engagement.
+        <p class="mt-4 text-sm md:text-base text-white">
+          At Cross Digital, we are driven by a passion for innovation and excellence in the ever-evolving world of digital marketing. Our team crafts unique, data-driven strategies to help your business thrive in both online and traditional media landscapes.
         </p>
 
-        <!-- Vision and Mission Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8 md:my-14">
-          <div class="p-6 sm:p-8 bg-blackGray text-white">
+       <!-- Vision and Mission Grid -->
+       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8 md:my-14">
+          <div class="p-6 sm:p-8 bg-blackGray rounded-lg shadow-md hover:shadow-xl transition-shadow">
             <div>
               <EyeIcon class="w-6 sm:w-8 text-secondary mb-3" />
-              <h5 class="text-xl sm:text-2xl mb-2 font-semibold tracking-tight">
+              <h5 class="text-xl sm:text-2xl mb-2 font-semibold tracking-tight text-white">
                 Our Vision
               </h5>
             </div>
@@ -33,10 +34,11 @@
               To empower businesses with cutting-edge digital marketing solutions, leading them to sustained growth and unmatched market dominance in the competitive digital landscape.
             </p>
           </div>
-          <div class="p-6 sm:p-8 bg-blackGray text-white">
+
+          <div class="p-6 sm:p-8 bg-blackGray rounded-lg shadow-md hover:shadow-xl transition-shadow">
             <div>
               <RocketLaunchIcon class="w-6 sm:w-8 text-secondary mb-3" />
-              <h5 class="text-xl sm:text-2xl mb-2 font-semibold tracking-tight">
+              <h5 class="text-xl sm:text-2xl mb-2 font-semibold tracking-tight text-white">
                 Our Mission
               </h5>
             </div>
@@ -47,10 +49,10 @@
         </div>
         
         <!-- Meet the Team Button -->
-        <div>
+        <div class="mt-4">
           <button
             type="button"
-            class="uppercase text-white border-2 border-secondary font-semibold text-sm sm:text-md px-6 py-2 sm:px-8 sm:py-3 hover:bg-secondary hover:text-primary"
+            class="uppercase text-white border-2 border-secondary font-semibold text-sm sm:text-md px-6 py-2 sm:px-8 sm:py-3 rounded-md transition-colors hover:bg-secondary hover:text-black"
           >
             Meet the Team
           </button>
@@ -63,49 +65,27 @@
 <script setup>
 import { useHead } from '@vueuse/head';
 import { EyeIcon, RocketLaunchIcon } from '@heroicons/vue/20/solid';
-
-const appUrlDev = import.meta.env.VITE_APP_URL_DEV;
+const appUrl = import.meta.env.VITE_APP_URL;
 
 // SEO Metadata
 useHead({
   title: 'About Us - Cross Digital | Digital Marketing Experts',
   meta: [
-    {
-      name: 'description',
-      content: 'Learn more about Cross Digital, a leading digital marketing agency passionate about innovation and excellence. We craft data-driven strategies to empower businesses.',
-    },
-    {
-      property: 'og:title',
-      content: 'About Us - Cross Digital',
-    },
-    {
-      property: 'og:description',
-      content: 'Discover how Cross Digital transforms visions into success through cutting-edge digital marketing solutions.',
-    },
-    {
-      property: 'og:image',
-      content: `${appUrlDev}/images/banner-laptop.jpg`
-    },
-    {
-      property: 'og:url',
-      content: `${appUrlDev}/#about-us`,
-    },
-    {
-      name: 'twitter:card',
-      content: 'summary_large_image',
-    },
-    {
-      name: 'twitter:title',
-      content: 'About Us - Cross Digital',
-    },
-    {
-      name: 'twitter:description',
-      content: 'Learn more about Cross Digital, a leading digital marketing agency passionate about innovation and excellence.',
-    },
-    {
-      name: 'twitter:image',
-      content: `${appUrlDev}/images/banner-laptop.jpg`, 
-    },
+    { name: 'description', content: 'Learn more about Cross Digital, a leading digital marketing agency passionate about innovation and excellence.' },
+    { property: 'og:title', content: 'About Us - Cross Digital' },
+    { property: 'og:description', content: 'Discover how Cross Digital transforms visions into success through cutting-edge digital marketing solutions.' },
+    { property: 'og:image', content: `${appUrl}/images/banner-laptop.jpg` },
+    { property: 'og:url', content: `${appUrl}/#about-us` },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'About Us - Cross Digital' },
+    { name: 'twitter:description', content: 'Learn more about Cross Digital, a leading digital marketing agency passionate about innovation and excellence.' },
+    { name: 'twitter:image', content: `${appUrl}/images/banner-laptop.jpg` },
   ],
 });
 </script>
+
+<style scoped>
+.bg-blackGray {
+  background-color: #1a1a1a;
+}
+</style>

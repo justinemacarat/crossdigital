@@ -10,14 +10,14 @@ import { faXTwitter, faInstagram, faFacebookF } from '@fortawesome/free-brands-s
 library.add(faQuoteRight, faXTwitter, faInstagram, faFacebookF)
 
 const head = createHead();
-const appUrlDev = import.meta.env.VITE_APP_URL_DEV;
+const appUrl = import.meta.env.VITE_APP_URL;
 
 console.log
 createInertiaApp({
   resolve: name => import(`./Pages/${name}.vue`), // Add .vue extension here
   setup({ el, App, props, plugin }) {
     const app = createApp({ render: () => h(App, props) });
-    app.config.globalProperties.$appUrlDev = appUrlDev;
+    app.config.globalProperties.$appUrl = appUrl;
     app.use(plugin)
        .use(head)
        .component('FontAwesomeIcon', FontAwesomeIcon)

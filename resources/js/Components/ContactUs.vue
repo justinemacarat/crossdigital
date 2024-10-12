@@ -1,10 +1,10 @@
 <template>
     <section id="contact-us">
-        <div class="mt-44 lg:mt-52 w-full">
+        <div class="mt-32 lg:mt-52 w-full">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 text-white">
                 <div class="flex flex-col justify-between">
                     <div>
-                        <h2 class="text-2xl sm:text-3xl md:text-4xl font-medium leading-tight sm:leading-snug md:leading-[3rem]">
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                             Start Now on Your Growth Journey
                         </h2>
                         <p class="w-3/4 my-4 text-white font-light text-sm lg:text-base">
@@ -62,8 +62,8 @@
 
                 <div class="flex flex-col">
                     <div>
-                        <p class="text-secondary font-semibold mt-2">Contact</p>
-                        <h2 class="text-2xl sm:text-3xl md:text-4xl font-medium leading-tight sm:leading-snug md:leading-[3rem]">
+                        <p class="text-secondary font-semibold tracking-wider uppercase">Contact</p>
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                             Start A Conversation With Us
                         </h2>
                     </div>
@@ -95,7 +95,7 @@
                                                 id="first_name" 
                                                 autocomplete="first-name" 
                                                 required
-                                                class="block w-full border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-neutral-500/60 placeholder:text-gray-400 
+                                                class="block w-full rounded-md border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-neutral-500/60 placeholder:text-gray-400 
                                                         focus:ring-2 focus:ring-inset focus:ring-neutral-500/60 bg-transparent sm:text-sm sm:leading-6">
                                         </div>
                                     </div>
@@ -109,7 +109,7 @@
                                                 id="last_name" 
                                                 autocomplete="last-name" 
                                                 required
-                                                class="block w-full border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-neutral-500/60 placeholder:text-gray-400 
+                                                class="block w-full rounded-md border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-neutral-500/60 placeholder:text-gray-400 
                                                         focus:ring-2 focus:ring-inset focus:ring-neutral-500/60 bg-transparent sm:text-sm sm:leading-6">
                                         </div>
                                     </div>
@@ -123,7 +123,7 @@
                                                 id="email" 
                                                 autocomplete="email" 
                                                 required
-                                                class="block w-full border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-neutral-500/60 placeholder:text-gray-400 
+                                                class="block w-full rounded-md border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-neutral-500/60 placeholder:text-gray-400 
                                                         focus:ring-2 focus:ring-inset focus:ring-neutral-500/60 bg-transparent sm:text-sm sm:leading-6">
                                         </div>
                                     </div>
@@ -137,7 +137,7 @@
                                                 id="company" 
                                                 autocomplete="company" 
                                                 required
-                                                class="block w-full border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-neutral-500/60 placeholder:text-gray-400 
+                                                class="block w-full rounded-md border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-neutral-500/60 placeholder:text-gray-400 
                                                         focus:ring-2 focus:ring-inset focus:ring-neutral-500/60 bg-transparent sm:text-sm sm:leading-6">
                                         </div>  
                                     </div>
@@ -150,7 +150,7 @@
                                                     name="message" 
                                                     rows="3" 
                                                     required
-                                                    class="block w-full border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-neutral-500/60 
+                                                    class="block w-full rounded-md border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-neutral-500/60 
                                                         focus:ring-2 focus:ring-inset focus:ring-neutral-500/60 bg-transparent sm:text-sm sm:leading-6"></textarea>
                                         </div>
                                     </div>
@@ -160,7 +160,7 @@
 
                         <div class="mt-6">
                             <button type="submit"  
-                                class="block w-full uppercase text-black border-2 border-secondary bg-secondary font-semibold text-sm md:text-md px-6 py-2 
+                                class="block w-full rounded-md uppercase text-black border-2 border-secondary bg-secondary font-semibold text-sm md:text-md px-6 py-2 
                                         mb-4 md:mb-0 text-center hover:bg-transparent hover:border-secondary hover:text-white">
                                 Send a message
                             </button>
@@ -191,7 +191,7 @@
     const showConfirmationDiv = ref(false);
     const loading = ref(false);
 
-    const appUrlDev = import.meta.env.VITE_APP_URL_DEV;
+    const appUrl = import.meta.env.VITE_APP_URL;
 
     const sendMessage = () => {
         loading.value = true; // Set loading state
@@ -228,7 +228,7 @@
             },
             {
                 property: 'og:url',
-                content: `${appUrlDev}/#contact`
+                content: `${appUrl}/#contact`
             },
             {
                 property: 'twitter:card',

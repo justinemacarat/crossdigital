@@ -2,8 +2,8 @@
     <section id="testimonials">
         <div class="mt-32 lg:mt-52 text-white">
             <div class="w-full">
-                <p class="text-secondary font-semibold">Testimonials</p>
-                <h1 class="mt-4 text-3xl md:text-4xl lg:text-5xl font-medium leading-tight md:leading-[3rem]">
+                <p class="text-secondary font-semibold tracking-wider uppercase">Testimonials</p>
+                <h1 class="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                     What people are saying
                 </h1>
                 <div class="lg:flex lg:flex-row mt-4">
@@ -52,7 +52,7 @@
   
   import { useHead } from '@vueuse/head';
   
-  const appUrlDev = import.meta.env.VITE_APP_URL_DEV;
+  const appUrl = import.meta.env.VITE_APP_URL;
 
   const testimonials = ref([
     {
@@ -93,11 +93,11 @@
       },
       {
         property: 'og:image',
-        content: `${appUrlDev}/images/testimonials/testimonial-image.png`, // Replace with a relevant image for the testimonials section
+        content: `${appUrl}/images/testimonials/testimonial-image.png`, // Replace with a relevant image for the testimonials section
       },
       {
         property: 'og:url',
-        content: `${appUrlDev}/#testimonials`,
+        content: `${appUrl}/#testimonials`,
       },
       {
         name: 'twitter:card',
@@ -113,7 +113,7 @@
       },
       {
         name: 'twitter:image',
-        content: `${appUrlDev}/images/testimonials/testimonial-image.png`, // Replace with a relevant image for the testimonials section
+        content: `${appUrl}/images/testimonials/testimonial-image.png`, // Replace with a relevant image for the testimonials section
       },
     ],
   });

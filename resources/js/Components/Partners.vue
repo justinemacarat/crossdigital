@@ -2,7 +2,7 @@
   <section id="partners">
     <div class="mt-32 lg:mt-52 text-white">
       <!-- Heading Section -->
-      <h1 class="my-4 text-2xl sm:text-3xl md:text-4xl font-medium leading-tight sm:leading-snug md:leading-[3rem] text-center">
+      <h1 class="my-4 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-center">
         Our Partners already have Best in Venture Support.
       </h1>
     </div>
@@ -41,7 +41,7 @@
 <script setup>
 import { useHead } from '@vueuse/head';
 
-const appUrlDev = import.meta.env.VITE_APP_URL_DEV;
+const appUrl = import.meta.env.VITE_APP_URL;
 
 // SEO Metadata
 useHead({
@@ -61,11 +61,11 @@ useHead({
     },
     {
       property: 'og:image',
-      content: `${appUrlDev}/images/partners/Darkle.png`, 
+      content: `${appUrl}/images/partners/Darkle.png`, 
     },
     {
       property: 'og:url',
-      content: `${appUrlDev}/#partners`,
+      content: `${appUrl}/#partners`,
     },
     {
       name: 'twitter:card',
@@ -81,7 +81,7 @@ useHead({
     },
     {
       name: 'twitter:image',
-      content: `${appUrlDev}/images/partners/Darkle.png`, 
+      content: `${appUrl}/images/partners/Darkle.png`, 
     },
   ],
 });

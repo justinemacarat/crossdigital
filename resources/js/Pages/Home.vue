@@ -1,5 +1,5 @@
 <template>
-    <div class="container px-12 mb-20 h-dvh">
+    <div class="container px-16 md:px-20 mb-20 h-dvh">
         <Navbar/>
         <div class="absolute top-20 bottom-0 inset-x-0 overflow-hidden">
             <video class="w-full h-full object-cover opacity-70" autoplay loop muted>
@@ -12,7 +12,7 @@
         </div>
         <!-- Image Section -->
     </div>
-    <div class="container px-12 mb-20">
+    <div class="container px-16 md:px-20 mb-20">
         <Services/>
         <AboutUs/>
         <Partners/>

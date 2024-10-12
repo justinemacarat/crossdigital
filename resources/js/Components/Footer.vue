@@ -1,9 +1,9 @@
 <template>
   <div class="bg-blackGray mt-32 lg:mt-52">
-    <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 container px-12 pt-20 pb-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 container px-16 md:px-20 pt-20 pb-12">
       <!-- First Column: Content and Social Media -->
-      <div class="col-span-1  md:col-span-2 lg:col-start-1 lg:col-end-3 flex flex-col lg:justify-between mb-8 md:mb-0">
-        <p class="text-white text-lg">Cross Digital - Digital Marketing</p>
+      <div class="col-span-1 md:col-span-2 lg:col-start-1 lg:col-end-3 flex flex-col lg:justify-between mb-8 md:mb-0">
+        <p class="text-white text-lg font-bold">Cross Digital - Digital Marketing</p>
         <p class="text-white text-sm mt-4">
           Our agency is dedicated to sparking innovation, creativity, and growth in the digital realm.
         </p>
@@ -25,7 +25,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-3">
           <!-- Company Section -->
           <div class="text-white">
-            <h3 @click="toggleCompany" class="text-sm font-semibold mb-5 cursor-pointer flex justify-between">
+            <h3 @click="toggleCompany" class="text-sm font-bold mb-5 cursor-pointer flex justify-between">
               Company
               <span class="lg:hidden">{{ isCompanyOpen ? '−' : '+' }}</span>
             </h3>
@@ -47,7 +47,7 @@
 
           <!-- Help Section -->
           <div class="text-white">
-            <h3 @click="toggleHelp" class="text-sm font-semibold mb-5 cursor-pointer flex justify-between">
+            <h3 @click="toggleHelp" class="text-sm font-bold mb-5 cursor-pointer flex justify-between">
               Help
               <span class="lg:hidden">{{ isHelpOpen ? '−' : '+' }}</span>
             </h3>
@@ -69,7 +69,7 @@
 
           <!-- Another Company Section -->
           <div class="text-white">
-            <h3 @click="toggleCompany2" class="text-sm font-semibold mb-5 cursor-pointer flex justify-between">
+            <h3 @click="toggleCompany2" class="text-sm font-bold mb-5 cursor-pointer flex justify-between">
               Company
               <span class="lg:hidden">{{ isCompany2Open ? '−' : '+' }}</span>
             </h3>
