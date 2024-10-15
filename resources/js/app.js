@@ -3,6 +3,8 @@ import { createInertiaApp } from '@inertiajs/vue3';
 import { createHead } from '@vueuse/head';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
+import { ZiggyVue } from 'ziggy-js';
+import { Ziggy } from './ziggy';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faQuoteRight } from '@fortawesome/free-solid-svg-icons'
 import { faXTwitter, faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons'; 
@@ -20,6 +22,7 @@ createInertiaApp({
     app.config.globalProperties.$appUrl = appUrl;
     app.use(plugin)
        .use(head)
+       .use(ZiggyVue)
        .component('FontAwesomeIcon', FontAwesomeIcon)
        .mount(el);
   },
