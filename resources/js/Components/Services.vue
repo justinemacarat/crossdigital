@@ -8,63 +8,65 @@
           Our Digital Marketing Services
         </h1>
         <p class="mt-4 text-white font-light text-sm md:text-base">
-          Our services are designed to elevate your business and reach your goals effectively. Explore our range of solutions tailored for your needs.
+          Our services are designed to elevate your business and reach your goals effectively. Explore our range of
+          solutions tailored for your needs.
         </p>
       </div>
 
       <!-- Services Section -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
         <div class="relative p-6 bg-blackGray border border-neutral-500/60 rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-xl">
-          <a href="#">
+           <a :href="route('web-development')">
             <ComputerDesktopIcon class="h-8 w-8 text-secondary mb-3" />
             <h5 class="text-xl sm:text-2xl mb-2 font-semibold tracking-tight text-white">Web Development</h5>
           </a>
           <p class="mb-3 text-white text-sm sm:text-base">
             We specialize in creating responsive and engaging websites using WordPress, custom solutions, and E-Commerce platforms tailored to your business needs.
           </p>
-          <a href="#" class="inline-flex items-center text-sm font-medium text-secondary transition-transform transform hover:translate-x-1">
+          <a :href="route('web-development')"
+            class="inline-flex items-center text-sm font-medium text-secondary transition-transform transform hover:translate-x-1">
             Learn More
             <ArrowRightIcon class="h-5 w-5 text-secondary ml-2" />
           </a>
         </div>
 
         <div class="relative p-6 bg-blackGray border border-neutral-500/60 rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-xl">
-          <a href="#">
+          <a :href="route('app-development')">
             <DevicePhoneMobileIcon class="h-8 w-8 text-secondary mb-3" />
             <h5 class="text-xl sm:text-2xl mb-2 font-semibold tracking-tight text-white">App Development</h5>
           </a>
           <p class="mb-3 text-white text-sm sm:text-base">
             Our team develops hybrid, native, and web applications for all platforms, ensuring a seamless experience for users across devices.
           </p>
-          <a href="#" class="inline-flex items-center text-sm font-medium text-secondary transition-transform transform hover:translate-x-1">
+          <a :href="route('app-development')" class="inline-flex items-center text-sm font-medium text-secondary transition-transform transform hover:translate-x-1">
             Learn More
             <ArrowRightIcon class="h-5 w-5 text-secondary ml-2" />
           </a>
         </div>
 
         <div class="relative p-6 bg-blackGray border border-neutral-500/60 rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-xl">
-          <a href="#">
+          <a :href="route('digital-marketing')">
             <MegaphoneIcon class="h-8 w-8 text-secondary mb-3" />
             <h5 class="text-xl sm:text-2xl mb-2 font-semibold tracking-tight text-white">Digital Marketing</h5>
           </a>
           <p class="mb-3 text-white text-sm sm:text-base">
             Maximize your online presence with our digital marketing strategies, including SEO, Google Ads, and social media management, tailored for impactful results.
           </p>
-          <a href="#" class="inline-flex items-center text-sm font-medium text-secondary transition-transform transform hover:translate-x-1">
+          <a :href="route('digital-marketing')" class="inline-flex items-center text-sm font-medium text-secondary transition-transform transform hover:translate-x-1">
             Learn More
             <ArrowRightIcon class="h-5 w-5 text-secondary ml-2" />
           </a>
         </div>
 
         <div class="relative p-6 bg-blackGray border border-neutral-500/60 rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-xl">
-          <a href="#">
+          <a :href="route('branding-design')">
             <PresentationChartBarIcon class="h-8 w-8 text-secondary mb-3" />
             <h5 class="text-xl sm:text-2xl mb-2 font-semibold tracking-tight text-white">Branding & Graphic Design</h5>
           </a>
           <p class="mb-3 text-white font-light">
             Craft a compelling brand identity with our graphic design services, corporate ID solutions, and content creation that resonates with your audience.
           </p>
-          <a href="#" class="inline-flex items-center text-sm font-medium text-secondary transition-transform transform hover:translate-x-1">
+          <a :href="route('branding-design')" class="inline-flex items-center text-sm font-medium text-secondary transition-transform transform hover:translate-x-1">
             Learn More
             <ArrowRightIcon class="h-5 w-5 text-secondary ml-2" />
           </a>
