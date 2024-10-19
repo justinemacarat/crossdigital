@@ -10,13 +10,13 @@
 
         <!-- Desktop Navigation Links (Visible on medium screens and larger) -->
         <div class="hidden lg:flex space-x-8">
-          <a href="#home-banner" class="text-white font-medium">
+          <a href="/#home-banner" class="text-white font-medium">
             <span class="underline-animation">Home</span>
           </a>
-          <a href="#services" class="text-white hover:text-white font-medium">
+          <a href="/#services" class="text-white hover:text-white font-medium">
             <span class="underline-animation">Services</span>
           </a>
-          <a href="#industries" class="text-white hover:text-white font-medium">
+          <a href="/#industries" class="text-white hover:text-white font-medium">
             <span class="underline-animation">Industries</span>
           </a>
           <a href="#testimonials" class="text-white hover:text-white font-medium">
@@ -45,23 +45,23 @@
     <!-- Mobile Menu Overlay -->
     <div  class="lg:hidden fixed top-18 right-0 w-full h-full bg-black transition-transform transform h-[calc(100vh-70px)]" :class="{'translate-x-0 transition-transform': isOpen, 'translate-x-full': !isOpen}">
       <div class="flex flex-col h-full p-12">
-        <a href="#home-banner" class="relative block px-4 py-2 text-md text-white font-medium" @click="toggleMenu">
+        <a href="/#home-banner" class="relative block px-4 py-2 text-md text-white font-medium" @click="toggleMenu">
           <span>Home</span>
         </a>
         <hr>
-        <a href="#services" class="relative block px-4 py-2 mt-3 text-md text-white font-medium" @click="toggleMenu">
+        <a href="/#services" class="relative block px-4 py-2 mt-3 text-md text-white font-medium" @click="toggleMenu">
           <span>Services</span>
         </a>
         <hr>
-        <a href="#industries" class="relative block px-4 py-2 mt-3 text-md text-white font-medium" @click="toggleMenu">
+        <a href="/#industries" class="relative block px-4 py-2 mt-3 text-md text-white font-medium" @click="toggleMenu">
           <span>Industries</span>
         </a>
         <hr>
-        <a href="#testimonials" class="relative block px-4 py-2 mt-3 text-md text-white font-medium" @click="toggleMenu">
+        <a href="/#testimonials" class="relative block px-4 py-2 mt-3 text-md text-white font-medium" @click="toggleMenu">
           <span>Testimonials</span>
         </a>
         <hr>              
-        <a href="#contact-us" class="relative block px-4 py-2 mt-8 text-center text-md text-black font-medium bg-secondary hover:bg-secondary hover:text-primary" @click="toggleMenu">
+        <a href="/#contact-us" class="relative block px-4 py-2 mt-8 text-center text-md text-black font-medium bg-secondary hover:bg-secondary hover:text-primary" @click="toggleMenu">
           Get Started
         </a>
       </div>

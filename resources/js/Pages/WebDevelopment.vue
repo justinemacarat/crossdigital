@@ -2,8 +2,8 @@
     <section class="relative">
     <Navbar />
     <div class="bg-blackGray py-40 mt-20">
-    <div class="container mx-auto text-center">
-      <h1 class="text-4xl font-bold text-white">Website Development</h1>
+    <div class="container mx-auto text-center  px-4">
+      <h1 class="text-4xl font-bold text-white ">Website Development</h1>
       <p class="mt-4 text-gray-400">
         <span>Website Development</span> - <a href="/" class="text-secondary hover:underline">Home</a>
       </p>
