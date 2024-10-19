@@ -31,12 +31,12 @@
                 <!-- Left Side (Two Boxes) -->
                 <div class="md:relative md:top-8 space-y-8 mr-0 md:mr-4 w-full md:w-auto">
                     <div class="p-6 bg-blackGray border border-neutral-500/60 relative rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-xl">
-                        <a href="#">
+                        <a :href="route('ecommerce-solution')">
                             <ComputerDesktopIcon class="h-8 w-8 text-secondary mb-3" />
                             <h5 class="text-xl sm:text-2xl mb-2 font-semibold tracking-tight text-white">E-commerce Solutions</h5>
                         </a>
                         <p class="mb-3 font-normal text-white font-light">Boost your online sales with our comprehensive e-commerce strategies tailored for your business.</p>
-                        <a href="#" class="inline-flex items-center text-sm font-medium text-secondary transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">
+                        <a :href="route('ecommerce-solution')" class="inline-flex items-center text-sm font-medium text-secondary transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">
                             Learn More
                             <ArrowRightIcon class="h-5 w-5 text-secondary ml-2" />
                         </a>
@@ -47,7 +47,7 @@
                             <h5 class="text-xl sm:text-2xl mb-2 font-semibold tracking-tight text-white">Social Media Marketing</h5>
                         </a>
                         <p class="mb-3 font-normal text-white font-light">Engage your audience with targeted social media campaigns that drive brand awareness and customer loyalty.</p>
-                        <a href="#" class="inline-flex items-center text-sm font-medium text-secondary transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">
+                        <a :href="route('social-media-marketing')" class="inline-flex items-center text-sm font-medium text-secondary transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">
                             Learn More
                             <ArrowRightIcon class="h-5 w-5 text-secondary ml-2" />
                         </a>
@@ -57,23 +57,23 @@
                 <!-- Right Side (Two Boxes) -->
                 <div class="space-y-8 w-full md:w-auto mt-8 md:mt-0 md:ml-4">
                     <div class="p-6 bg-blackGray border border-neutral-500/60 relative rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-xl">
-                        <a href="#">
+                        <a :href="route('content-marketing')">
                             <ComputerDesktopIcon class="h-8 w-8 text-secondary mb-3" />
                             <h5 class="text-xl sm:text-2xl mb-2 font-semibold tracking-tight text-white">Content Marketing</h5>
                         </a>
                         <p class="mb-3 font-normal text-white font-light">Drive traffic and engagement with compelling content tailored to resonate with your audience.</p>
-                        <a href="#" class="inline-flex items-center text-sm font-medium text-secondary transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">
+                        <a :href="route('content-marketing')" class="inline-flex items-center text-sm font-medium text-secondary transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">
                             Learn More
                             <ArrowRightIcon class="h-5 w-5 text-secondary ml-2" />
                         </a>
                     </div>
                     <div class="p-6 bg-blackGray border border-neutral-500/60 relative rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-xl">
-                        <a href="#">
+                        <a :href="route('seo-services')">
                             <ComputerDesktopIcon class="h-8 w-8 text-secondary mb-3" />
                             <h5 class="text-xl sm:text-2xl mb-2 font-semibold tracking-tight text-white">SEO Services</h5>
                         </a>
                         <p class="mb-3 font-normal text-white font-light">Improve your search engine rankings and attract more organic traffic with our proven SEO strategies.</p>
-                        <a href="#" class="inline-flex items-center text-sm font-medium text-secondary transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">
+                        <a :href="route('seo-services')" class="inline-flex items-center text-sm font-medium text-secondary transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">
                             Learn More
                             <ArrowRightIcon class="h-5 w-5 text-secondary ml-2" />
                         </a>
@@ -86,7 +86,7 @@
 
 <script setup>
 import { useHead } from '@vueuse/head';
-import { ArrowRightCircleIcon, ArrowRightIcon, ComputerDesktopIcon } from '@heroicons/vue/20/solid';
+import { ArrowRightCircleIcon, ArrowRightIcon, ComputerDesktopIcon } from '@heroicons/vue/24/solid';
 
 const appUrl = import.meta.env.VITE_APP_URL;
 
