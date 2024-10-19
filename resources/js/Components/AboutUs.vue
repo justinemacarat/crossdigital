@@ -20,9 +20,10 @@
         <p class="mt-4 text-sm md:text-base text-white">
           At Cross Digital, we are driven by a passion for innovation and excellence in the ever-evolving world of digital marketing. Our team crafts unique, data-driven strategies to help your business thrive in both online and traditional media landscapes.
         </p>
+        
 
        <!-- Vision and Mission Grid -->
-       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8 md:my-14">
+       <!-- <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8 md:my-14">
           <div class="p-6 sm:p-8 bg-blackGray rounded-lg shadow-md hover:shadow-xl transition-shadow">
             <div>
               <EyeIcon class="w-6 sm:w-8 text-secondary mb-3" />
@@ -46,6 +47,30 @@
               To deliver strategic, data-driven marketing solutions that transform our clients' brands, enhance their online visibility, drive traffic, and maximize ROI across digital and traditional media spaces.
             </p>
           </div>
+        </div> -->
+        <div class="rounded-lg text-darkGray shadow-lg p-6 md:p-8">
+          <div class="flex justify-around mb-6">
+            <button @click="activeTab = 'mission'" :class="activeTab === 'mission' ? 'border-b-2 border-secondary' : ''"class="uppercase font-semibold text-lg md:text-lg px-4 py-2 focus:outline-none">
+              Mission
+            </button>
+            <button @click="activeTab = 'vision'" :class="activeTab === 'vision' ? 'border-b-2 border-secondary' : ''"class="uppercase font-semibold text-lg md:text-lg px-4 py-2 focus:outline-none">
+              Our Vision
+            </button>
+          </div>
+
+          <!-- Content based on active tab -->
+          <div v-if="activeTab === 'mission'" class="text-left">
+            <h5 class="text-xl sm:text-2xl font-semibold mb-2"></h5>
+            <p class="text-sm sm:text-base">
+              To empower businesses with cutting-edge digital marketing solutions, leading them to sustained growth and unmatched market dominance in the competitive digital landscape.
+            </p>
+          </div>
+          <div v-if="activeTab === 'vision'" class="text-left">
+            <h5 class="text-xl sm:text-2xl font-semibold mb-2"></h5>
+            <p class="text-sm sm:text-base">
+              To deliver strategic, data-driven marketing solutions that transform our clients' brands, enhance their online visibility, drive traffic, and maximize ROI across digital and traditional media spaces.
+            </p>
+          </div>
         </div>
         
         <!-- Meet the Team Button -->
@@ -63,9 +88,13 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import { useHead } from '@vueuse/head';
 import { EyeIcon, RocketLaunchIcon } from '@heroicons/vue/20/solid';
 const appUrl = import.meta.env.VITE_APP_URL;
+
+const activeTab = ref('mission');
+
 
 // SEO Metadata
 useHead({
