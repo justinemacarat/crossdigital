@@ -6,33 +6,43 @@
         Our Partners already have Best in Venture Support.
       </h1>
     </div>
-  
+
     <!-- Partners Logos Section -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 justify-items-center">
-      <img
-        class="w-24 sm:w-32 md:w-44 object-cover"
-        src="/images/partners/Darkle.png"
-        alt="image description"
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-6 justify-items-center">
+       <img
+        class="w-auto h-24 sm:h-32 md:h-44 object-contain self-center"
+        src="/images/partners/Elite.png"
+        alt="Elite"
       />
       <img
-        class="w-24 sm:w-32 md:w-44 object-cover"
-        src="/images/partners/Dconsult.png"
-        alt="image description"
+        class="w-auto h-24 sm:h-32 md:h-44 object-contain self-center"
+        src="/images/partners/STM.png"
+        alt="Smooth Torque Marine"
       />
       <img
-        class="w-24 sm:w-32 md:w-44 object-cover"
-        src="/images/partners/Debite.png"
-        alt="image description"
+        class="w-auto h-24 sm:h-32 md:h-44 object-contain self-center"
+        src="/images/partners/Mackay.png"
+        alt="Mackay Marine"
       />
       <img
-        class="w-24 sm:w-32 md:w-44 object-cover"
-        src="/images/partners/Ditech.png"
-        alt="image description"
+        class="w-auto h-24 sm:h-32 md:h-44 object-contain self-center"
+        src="/images/partners/Articfox.png"
+        alt="Arctic Fox Cleaning"
       />
       <img
-        class="w-24 sm:w-32 md:w-44 object-cover"
-        src="/images/partners/Energize.png"
-        alt="image description"
+        class="w-auto h-24 sm:h-32 md:h-44 object-contain self-center"
+        src="/images/partners/Merlin.png"
+        alt="Merlin Bookkeeping"
+      />
+      <img
+        class="w-auto h-24 sm:h-32 md:h-44 object-contain self-center"
+        src="/images/partners/Clovers.png"
+        alt="Clovers Volleyball Club"
+      />
+      <img
+        class="w-auto h-24 sm:h-32 md:h-44 object-contain self-center"
+        src="/images/partners/Voxstudio.png"
+        alt="Vox Studio"
       />
     </div>
   </section>
