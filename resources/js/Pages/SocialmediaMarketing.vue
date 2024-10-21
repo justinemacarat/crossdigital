@@ -88,12 +88,8 @@
                         </div>
                     </div>
                     <!-- Right side: Image -->
-                    <!-- <div class="flex justify-center">
-                        <img src="/images/social-media.jpg" alt="Social Media Marketing"
-                            class="rounded-lg shadow-lg object-cover" style="width: 600px; height: 800px;" />
-                    </div> -->
                     <div class="relative group overflow-hidden rounded-lg shadow-lg">
-                        <img class="object-cover group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700 " style="width: 600px; height: 900px;"
+                        <img class="w-full h-64 sm:h-80 lg:h-full object-cover group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700 rounded-lg"
                             src="/images/social-media.jpg" alt="Social Media Marketing" />
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
