@@ -19,26 +19,28 @@
         <p class="mt-4 text-sm md:text-base text-white">
           At Cross Digital, we are driven by a passion for innovation and excellence in the ever-evolving world of digital marketing. Our team crafts unique, data-driven strategies to help your business thrive in both online and traditional media landscapes.
         </p>
-        <div class="rounded-lg text-darkGray shadow-lg p-6 md:p-8">
-          <div class="flex justify-around mb-6">
-            <button @click="activeTab = 'mission'" :class="activeTab === 'mission' ? 'border-b-2 border-secondary' : ''"class="uppercase font-semibold text-lg md:text-lg px-4 py-2 focus:outline-none">
+        <div class="rounded-lg text-darkGray shadow-lg py-6 md:py-8">
+          <div class="relative flex justify-around mb-6">
+            <div class="absolute bottom-0 left-0 transition-transform duration-300 px-2 lg:px-6" :style="{ width: activeTab === 'mission' ? 'calc(100% / 2)' : 'calc(100% / 2)', transform: activeTab === 'mission' ? 'translateX(0)' : 'translateX(100%)' }">
+              <div class="border-b-2 border-secondary"></div>
+            </div>
+
+            <button @click="activeTab = 'mission'" :class="activeTab === 'mission' ? 'font-semibold' : ''" class="uppercase text-lg md:text-lg py-2 focus:outline-none">
               Mission
             </button>
-            <button @click="activeTab = 'vision'" :class="activeTab === 'vision' ? 'border-b-2 border-secondary' : ''"class="uppercase font-semibold text-lg md:text-lg px-4 py-2 focus:outline-none">
-              Our Vision
+            <button @click="activeTab = 'vision'" :class="activeTab === 'vision' ? 'font-semibold' : ''" class="uppercase text-lg md:text-lg py-2 focus:outline-none">
+              Vision
             </button>
           </div>
 
           <!-- Content based on active tab -->
           <div v-if="activeTab === 'mission'" class="text-left">
-            <h5 class="text-xl sm:text-2xl font-semibold mb-2"></h5>
-            <p class="text-sm sm:text-base">
+            <p class="text-sm sm:text-base px-6 md:px-8">
               To empower businesses with cutting-edge digital marketing solutions, leading them to sustained growth and unmatched market dominance in the competitive digital landscape.
             </p>
           </div>
           <div v-if="activeTab === 'vision'" class="text-left">
-            <h5 class="text-xl sm:text-2xl font-semibold mb-2"></h5>
-            <p class="text-sm sm:text-base">
+            <p class="text-sm sm:text-base px-6 md:px-8">
               To deliver strategic, data-driven marketing solutions that transform our clients' brands, enhance their online visibility, drive traffic, and maximize ROI across digital and traditional media spaces.
             </p>
           </div>
@@ -58,29 +60,27 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { useHead } from '@vueuse/head';
-import { EyeIcon, RocketLaunchIcon } from '@heroicons/vue/20/solid';
-const appUrl = import.meta.env.VITE_APP_URL;
+  import { ref } from 'vue';
+  // import { useHead } from '@vueuse/head';
 
-const activeTab = ref('mission');
+  const appUrl = window.appConfig.appUrl;
+  const activeTab = ref('mission');
 
-
-// SEO Metadata
-useHead({
-  title: 'About Us - Cross Digital | Digital Marketing Experts',
-  meta: [
-    { name: 'description', content: 'Learn more about Cross Digital, a leading digital marketing agency passionate about innovation and excellence.' },
-    { property: 'og:title', content: 'About Us - Cross Digital' },
-    { property: 'og:description', content: 'Discover how Cross Digital transforms visions into success through cutting-edge digital marketing solutions.' },
-    { property: 'og:image', content: `${appUrl}/images/banner-laptop.jpg` },
-    { property: 'og:url', content: `${appUrl}/#about-us` },
-    { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'About Us - Cross Digital' },
-    { name: 'twitter:description', content: 'Learn more about Cross Digital, a leading digital marketing agency passionate about innovation and excellence.' },
-    { name: 'twitter:image', content: `${appUrl}/images/banner-laptop.jpg` },
-  ],
-});
+  // SEO Metadata
+  // useHead({
+  //   title: 'About Us - Cross Digital | Digital Marketing Experts',
+  //   meta: [
+  //     { name: 'description', content: 'Learn more about Cross Digital, a leading digital marketing agency passionate about innovation and excellence.' },
+  //     { property: 'og:title', content: 'About Us - Cross Digital' },
+  //     { property: 'og:description', content: 'Discover how Cross Digital transforms visions into success through cutting-edge digital marketing solutions.' },
+  //     { property: 'og:image', content: `${appUrl}/images/banner-laptop.jpg` },
+  //     { property: 'og:url', content: `${appUrl}/#about-us` },
+  //     { name: 'twitter:card', content: 'summary_large_image' },
+  //     { name: 'twitter:title', content: 'About Us - Cross Digital' },
+  //     { name: 'twitter:description', content: 'Learn more about Cross Digital, a leading digital marketing agency passionate about innovation and excellence.' },
+  //     { name: 'twitter:image', content: `${appUrl}/images/banner-laptop.jpg` },
+  //   ],
+  // });
 </script>
 
 <style scoped>

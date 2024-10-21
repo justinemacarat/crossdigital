@@ -4,7 +4,6 @@ import { createHead } from '@vueuse/head';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { ZiggyVue } from 'ziggy-js';
-import { Ziggy } from './ziggy';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faQuoteRight } from '@fortawesome/free-solid-svg-icons'
 import { faXTwitter, faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons'; 
@@ -14,7 +13,6 @@ library.add(faQuoteRight, faXTwitter, faInstagram, faFacebookF)
 const head = createHead();
 const appUrl = import.meta.env.VITE_APP_URL;
 
-console.log
 createInertiaApp({
   resolve: name => import(`./Pages/${name}.vue`), // Add .vue extension here
   setup({ el, App, props, plugin }) {
