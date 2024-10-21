@@ -63,7 +63,7 @@
   import { ref } from 'vue';
   // import { useHead } from '@vueuse/head';
 
-  const appUrl = window.appConfig.appUrl;
+  // const appUrl = window.appConfig.appUrl;
   const activeTab = ref('mission');
 
   // SEO Metadata

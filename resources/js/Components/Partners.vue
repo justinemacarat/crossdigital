@@ -7,49 +7,52 @@
       </h1>
     </div>
 
-    <!-- Partners Logos Section -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-6 justify-items-center">
-       <img
-        class="w-auto h-24 sm:h-32 md:h-44 object-contain self-center"
-        src="/images/partners/Elite.png"
-        alt="Elite"
-      />
-      <img
-        class="w-auto h-24 sm:h-32 md:h-44 object-contain self-center"
-        src="/images/partners/STM.png"
-        alt="Smooth Torque Marine"
-      />
-      <img
-        class="w-auto h-24 sm:h-32 md:h-44 object-contain self-center"
-        src="/images/partners/Mackay.png"
-        alt="Mackay Marine"
-      />
-      <img
-        class="w-auto h-24 sm:h-32 md:h-44 object-contain self-center"
-        src="/images/partners/Articfox.png"
-        alt="Arctic Fox Cleaning"
-      />
-      <img
-        class="w-auto h-24 sm:h-32 md:h-44 object-contain self-center"
-        src="/images/partners/Merlin.png"
-        alt="Merlin Bookkeeping"
-      />
-      <img
-        class="w-auto h-24 sm:h-32 md:h-44 object-contain self-center"
-        src="/images/partners/Clovers.png"
-        alt="Clovers Volleyball Club"
-      />
-      <img
-        class="w-auto h-24 sm:h-32 md:h-44 object-contain self-center"
-        src="/images/partners/Voxstudio.png"
-        alt="Vox Studio"
-      />
-    </div>
+    <!-- Partners Logos Section with Vue3Marquee -->
+    <Vue3Marquee>
+      <div class="partners-logos grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-6 justify-items-center ">
+        <img
+          class="logo"
+          src="/images/partners/Elite.png"
+          alt="Elite"
+        />
+        <img
+          class="logo"
+          src="/images/partners/STM.png"
+          alt="Smooth Torque Marine"
+        />
+        <img
+          class="logo"
+          src="/images/partners/Mackay.png"
+          alt="Mackay Marine"
+        />
+        <img
+          class="logo"
+          src="/images/partners/Articfox.png"
+          alt="Arctic Fox Cleaning"
+        />
+        <img
+          class="logo"
+          src="/images/partners/Merlin.png"
+          alt="Merlin Bookkeeping"
+        />
+        <img
+          class="logo"
+          src="/images/partners/Clovers.png"
+          alt="Clovers Volleyball Club"
+        />
+        <img
+          class="logo mr-16"
+          src="/images/partners/Voxstudio.png"
+          alt="Vox Studio"
+        />
+      </div>
+    </Vue3Marquee>
   </section>
 </template>
 
 <script setup>
 import { useHead } from '@vueuse/head';
+import { Vue3Marquee } from 'vue3-marquee'
 
 const appUrl = import.meta.env.VITE_APP_URL;
 
@@ -71,7 +74,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: `${appUrl}/images/partners/Darkle.png`, 
+      content: `${appUrl}/images/partners/Darkle.png`,
     },
     {
       property: 'og:url',
@@ -91,8 +94,22 @@ useHead({
     },
     {
       name: 'twitter:image',
-      content: `${appUrl}/images/partners/Darkle.png`, 
+      content: `${appUrl}/images/partners/Darkle.png`,
     },
   ],
 });
 </script>
+
+<style scoped>
+.partners-logos {
+  display: flex;
+  gap: 6rem;
+}
+
+.logo {
+  width: auto;
+  height: 6rem; /* Adjust this value for smaller logos */
+  object-fit: contain;
+}
+
+</style>
