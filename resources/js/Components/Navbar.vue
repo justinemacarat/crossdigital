@@ -10,7 +10,7 @@
 
         <!-- Desktop Navigation Links (Visible on medium screens and larger) -->
         <div class="hidden lg:flex space-x-8">
-          <a href="/#home-banner" class="text-white font-medium">
+          <a href="/#homeBanner" class="text-white font-medium">
             <span class="underline-animation">Home</span>
           </a>
           <a href="/#services" class="text-white hover:text-white font-medium">
@@ -25,7 +25,9 @@
           <a href="#blogs" class="text-white hover:text-white font-medium">
             <span class="underline-animation">Blogs</span>
           </a>
-        
+          <a href="#aboutUs" class="text-white hover:text-white font-medium">
+            <span class="underline-animation">About Us</span>
+          </a>
         </div>
 
         <!-- Get Started Button (Visible on mobile and desktop) -->
@@ -37,7 +39,7 @@
 
         <!-- Get Started Button (Visible on desktop) -->
         <div class="hidden lg:block">
-          <a href="#" class="bg-secondary border-2 border-secondary text-primary px-6 py-3 text-sm font-medium rounded-md uppercase hover:border-secondary hover:bg-transparent hover:text-white">Get Started</a>
+          <a href="#contactUs" class="bg-secondary border-2 border-secondary text-primary px-6 py-3 text-sm font-medium rounded-md uppercase hover:border-secondary hover:bg-transparent hover:text-white">Get Started</a>
         </div>
       </div>
     </div>
@@ -45,7 +47,7 @@
     <!-- Mobile Menu Overlay -->
     <div  class="lg:hidden fixed top-18 right-0 w-full h-full bg-black transition-transform transform h-[calc(100vh-70px)]" :class="{'translate-x-0 transition-transform': isOpen, 'translate-x-full': !isOpen}">
       <div class="flex flex-col h-full p-12">
-        <a href="/#home-banner" class="relative block px-4 py-2 text-md text-white font-medium" @click="toggleMenu">
+        <a href="/#homeBanner" class="relative block px-4 py-2 text-md text-white font-medium" @click="toggleMenu">
           <span>Home</span>
         </a>
         <hr>
@@ -60,8 +62,14 @@
         <a href="/#testimonials" class="relative block px-4 py-2 mt-3 text-md text-white font-medium" @click="toggleMenu">
           <span>Testimonials</span>
         </a>
+        <a href="#blogs" class="text-white hover:text-white font-medium">
+            <span class="underline-animation">Blogs</span>
+          </a>
+          <a href="#aboutUs" class="text-white hover:text-white font-medium">
+            <span class="underline-animation">About Us</span>
+          </a>
         <hr>              
-        <a href="/#contact-us" class="relative block px-4 py-2 mt-8 text-center text-md text-black font-medium bg-secondary hover:bg-secondary hover:text-primary" @click="toggleMenu">
+        <a href="/#contactUs" class="relative block px-4 py-2 mt-8 text-center text-md text-black font-medium bg-secondary hover:bg-secondary hover:text-primary" @click="toggleMenu">
           Get Started
         </a>
       </div>

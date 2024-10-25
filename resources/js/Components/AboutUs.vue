@@ -1,5 +1,5 @@
 <template>
-  <section id="about-us" class="relative">
+  <section id="aboutUs" class="relative">
     <div class="mt-32 lg:mt-52 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 text-white items-center">
       <!-- Image Section -->
       <div class="relative group overflow-hidden rounded-lg shadow-lg">
@@ -63,7 +63,6 @@
   import { ref } from 'vue';
   // import { useHead } from '@vueuse/head';
 
-  // const appUrl = window.appConfig.appUrl;
   const activeTab = ref('mission');
 
   // SEO Metadata

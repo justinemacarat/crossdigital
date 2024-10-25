@@ -51,53 +51,53 @@
 </template>
 
 <script setup>
-import { useHead } from '@vueuse/head';
+//import { useHead } from '@vueuse/head';
 import { Vue3Marquee } from 'vue3-marquee'
 
 const appUrl = import.meta.env.VITE_APP_URL;
 
 // SEO Metadata
-useHead({
-  title: 'Our Partners - Cross Digital | Empowering Business Success',
-  meta: [
-    {
-      name: 'description',
-      content: 'Discover our valued partners at Cross Digital. We collaborate with industry leaders to provide the best venture support and innovative solutions for your business.',
-    },
-    {
-      property: 'og:title',
-      content: 'Our Partners - Cross Digital',
-    },
-    {
-      property: 'og:description',
-      content: 'Explore Cross Digital\'s partnerships with leading companies that enhance our capabilities and support our commitment to delivering excellence in digital marketing.',
-    },
-    {
-      property: 'og:image',
-      content: `${appUrl}/images/partners/Darkle.png`,
-    },
-    {
-      property: 'og:url',
-      content: `${appUrl}/#partners`,
-    },
-    {
-      name: 'twitter:card',
-      content: 'summary_large_image',
-    },
-    {
-      name: 'twitter:title',
-      content: 'Our Partners - Cross Digital',
-    },
-    {
-      name: 'twitter:description',
-      content: 'Learn about Cross Digital\'s strategic partnerships with top companies, ensuring exceptional support and innovative solutions for our clients.',
-    },
-    {
-      name: 'twitter:image',
-      content: `${appUrl}/images/partners/Darkle.png`,
-    },
-  ],
-});
+// useHead({
+//   title: 'Our Partners - Cross Digital | Empowering Business Success',
+//   meta: [
+//     {
+//       name: 'description',
+//       content: 'Discover our valued partners at Cross Digital. We collaborate with industry leaders to provide the best venture support and innovative solutions for your business.',
+//     },
+//     {
+//       property: 'og:title',
+//       content: 'Our Partners - Cross Digital',
+//     },
+//     {
+//       property: 'og:description',
+//       content: 'Explore Cross Digital\'s partnerships with leading companies that enhance our capabilities and support our commitment to delivering excellence in digital marketing.',
+//     },
+//     {
+//       property: 'og:image',
+//       content: `${appUrl}/images/partners/Darkle.png`,
+//     },
+//     {
+//       property: 'og:url',
+//       content: `${appUrl}/#partners`,
+//     },
+//     {
+//       name: 'twitter:card',
+//       content: 'summary_large_image',
+//     },
+//     {
+//       name: 'twitter:title',
+//       content: 'Our Partners - Cross Digital',
+//     },
+//     {
+//       name: 'twitter:description',
+//       content: 'Learn about Cross Digital\'s strategic partnerships with top companies, ensuring exceptional support and innovative solutions for our clients.',
+//     },
+//     {
+//       name: 'twitter:image',
+//       content: `${appUrl}/images/partners/Darkle.png`,
+//     },
+//   ],
+// });
 </script>
 
 <style scoped>

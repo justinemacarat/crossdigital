@@ -21,7 +21,7 @@
       </div>
 
       <!-- Second Column: Collapsible Sections -->
-      <div class="col-span-1 md:col-end-5 md:col-span-1 lg:col-end-7 lg:col-span-3">
+      <div class="col-span-1 md:col-end-5 md:col-span-1 lg:col-end-8 lg:col-span-3">
         <div class="grid grid-cols-1 lg:grid-cols-3">
           <!-- Company Section -->
           <div class="text-white">
@@ -36,12 +36,12 @@
               <li class="mt-3">
                 <a href="#" class="hover:underline">Blogs</a>
               </li>
-              <li class="mt-3">
+              <!-- <li class="mt-3">
                 <a href="#" class="hover:underline">Works</a>
               </li>
               <li class="mt-3">
                 <a href="#" class="hover:underline">Careers</a>
-              </li>
+              </li> -->
             </ul>
           </div>
 
@@ -52,23 +52,23 @@
               <span class="lg:hidden">{{ isHelpOpen ? '−' : '+' }}</span>
             </h3>
             <ul v-show="isHelpOpen" class="text-white text-sm transition-all duration-300 ease-in-out mb-6 lg:mb-0">
-              <li class="mt-3">
+              <!-- <li class="mt-3">
                 <a href="#" class="hover:underline">Customer Support</a>
-              </li>
+              </li> -->
               <li class="mt-3">
                 <a href="#" class="hover:underline">Terms & Conditions</a>
               </li>
               <li class="mt-3">
                 <a href="#" class="hover:underline">Privacy Policy</a>
               </li>
-              <li class="mt-3">
+              <!-- <li class="mt-3">
                 <a href="#" class="hover:underline">Payments</a>
-              </li>
+              </li> -->
             </ul>
           </div>
 
           <!-- Another Company Section -->
-          <div class="text-white">
+          <!-- <div class="text-white">
             <h3 @click="toggleCompany2" class="text-sm font-bold mb-5 cursor-pointer flex justify-between">
               Company
               <span class="lg:hidden">{{ isCompany2Open ? '−' : '+' }}</span>
@@ -87,7 +87,7 @@
                 <a href="#" class="hover:underline">Careers</a>
               </li>
             </ul>
-          </div>
+          </div> -->
         </div>
       </div>
       <hr class="border-t border-gray-600 col-span-full mt-8">
