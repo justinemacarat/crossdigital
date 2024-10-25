@@ -1,5 +1,5 @@
 <template>
-    <section id="contact-us">
+    <section id="contactUs">
         <div class="mt-32 lg:mt-52 w-full">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 text-white">
                 <div class="flex flex-col justify-between">
@@ -178,7 +178,7 @@
     import { useForm } from '@inertiajs/vue3';
     import { ref } from 'vue';
     import axios from 'axios';
-    import { useHead } from '@vueuse/head';
+    //import { useHead } from '@vueuse/head';
 
     const form = useForm({
         first_name: '',
@@ -211,39 +211,39 @@
     };
 
     // SEO Head Data
-    useHead({
-        title: 'Contact Us - Cross Digital | Digital Marketing Experts',
-        meta: [
-            {
-                name: 'description',
-                content: 'Get in touch with us for inquiries, support, or feedback. We value your communication and look forward to connecting with you.'
-            },
-            {
-                property: 'og:title',
-                content: 'Contact Us - Cross Digital'
-            },
-            {
-                property: 'og:description',
-                content: 'Reach out to us for any questions or support. Your feedback is important to us!'
-            },
-            {
-                property: 'og:url',
-                content: `${appUrl}/#contact`
-            },
-            {
-                property: 'twitter:card',
-                content: 'summary_large_image'
-            },
-            {
-                property: 'twitter:title',
-                content: 'Contact Us - Cross Digital'
-            },
-            {
-                property: 'twitter:description',
-                content: 'We are here to assist you with your inquiries.'
-            }
-        ]
-    });
+    // useHead({
+    //     title: 'Contact Us - Cross Digital | Digital Marketing Experts',
+    //     meta: [
+    //         {
+    //             name: 'description',
+    //             content: 'Get in touch with us for inquiries, support, or feedback. We value your communication and look forward to connecting with you.'
+    //         },
+    //         {
+    //             property: 'og:title',
+    //             content: 'Contact Us - Cross Digital'
+    //         },
+    //         {
+    //             property: 'og:description',
+    //             content: 'Reach out to us for any questions or support. Your feedback is important to us!'
+    //         },
+    //         {
+    //             property: 'og:url',
+    //             content: `${appUrl}/#contact`
+    //         },
+    //         {
+    //             property: 'twitter:card',
+    //             content: 'summary_large_image'
+    //         },
+    //         {
+    //             property: 'twitter:title',
+    //             content: 'Contact Us - Cross Digital'
+    //         },
+    //         {
+    //             property: 'twitter:description',
+    //             content: 'We are here to assist you with your inquiries.'
+    //         }
+    //     ]
+    // });
 </script>
 
 <style scoped>

@@ -50,7 +50,7 @@
   import 'swiper/css/navigation';
   import 'swiper/css/autoplay'; // Import autoplay styles
   
-  import { useHead } from '@vueuse/head';
+//  import { useHead } from '@vueuse/head';
   
   const appUrl = import.meta.env.VITE_APP_URL;
 
@@ -76,48 +76,48 @@
   ]);
 
   // SEO Metadata
-  useHead({
-    title: 'Testimonials | See What Our Clients Say | Cross Digital',
-    meta: [
-      {
-        name: 'description',
-        content: 'Read testimonials from our satisfied clients at Cross Digital. Discover how our digital marketing services have made a difference for businesses and individuals alike.',
-      },
-      {
-        property: 'og:title',
-        content: 'Testimonials - Cross Digital',
-      },
-      {
-        property: 'og:description',
-        content: 'Explore client testimonials showcasing the impact of our digital marketing services. Join the ranks of satisfied customers at Cross Digital.',
-      },
-      {
-        property: 'og:image',
-        content: `${appUrl}/images/testimonials/testimonial-image.png`, // Replace with a relevant image for the testimonials section
-      },
-      {
-        property: 'og:url',
-        content: `${appUrl}/#testimonials`,
-      },
-      {
-        name: 'twitter:card',
-        content: 'summary_large_image',
-      },
-      {
-        name: 'twitter:title',
-        content: 'Client Testimonials - Cross Digital',
-      },
-      {
-        name: 'twitter:description',
-        content: 'Discover how Cross Digital has transformed businesses through digital marketing. Read our client testimonials for insights and experiences.',
-      },
-      {
-        name: 'twitter:image',
-        content: `${appUrl}/images/testimonials/testimonial-image.png`, // Replace with a relevant image for the testimonials section
-      },
-    ],
-  });
-  </script>
+  // useHead({
+  //   title: 'Testimonials | See What Our Clients Say | Cross Digital',
+  //   meta: [
+  //     {
+  //       name: 'description',
+  //       content: 'Read testimonials from our satisfied clients at Cross Digital. Discover how our digital marketing services have made a difference for businesses and individuals alike.',
+  //     },
+  //     {
+  //       property: 'og:title',
+  //       content: 'Testimonials - Cross Digital',
+  //     },
+  //     {
+  //       property: 'og:description',
+  //       content: 'Explore client testimonials showcasing the impact of our digital marketing services. Join the ranks of satisfied customers at Cross Digital.',
+  //     },
+  //     {
+  //       property: 'og:image',
+  //       content: `${appUrl}/images/testimonials/testimonial-image.png`, // Replace with a relevant image for the testimonials section
+  //     },
+  //     {
+  //       property: 'og:url',
+  //       content: `${appUrl}/#testimonials`,
+  //     },
+  //     {
+  //       name: 'twitter:card',
+  //       content: 'summary_large_image',
+  //     },
+  //     {
+  //       name: 'twitter:title',
+  //       content: 'Client Testimonials - Cross Digital',
+  //     },
+  //     {
+  //       name: 'twitter:description',
+  //       content: 'Discover how Cross Digital has transformed businesses through digital marketing. Read our client testimonials for insights and experiences.',
+  //     },
+  //     {
+  //       name: 'twitter:image',
+  //       content: `${appUrl}/images/testimonials/testimonial-image.png`, // Replace with a relevant image for the testimonials section
+  //     },
+  //   ],
+  // });
+</script>
   
   <style>
     .swiper {
